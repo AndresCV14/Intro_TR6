@@ -1,0 +1,72 @@
+---
+title: "Tarea_R1"
+author: "Andrés Calderón"
+date: '2022-02-26'
+output: html_document
+html_document: 
+  fig_height: 6
+fight_width: 8
+theme: journal
+highlight: zenburn
+toc: yes
+toc_depht: 4
+toc_float:
+  collapsed: no
+smooth_scroll: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## R Tarea 1:
+### Ejercicio 1
+
+```{r Ejer_1}
+# Ejercicio 1:
+ciudad <- "Loja"
+print(ciudad)
+```
+
+### Ejercicio 2:
+
+
+```{r Ejer_2}
+# Ejercicio2:
+pais_andes <- c("Argentina", "Bolivia", "Chile", "Colombia", "Ecuador", "Perú", "Venezuela")
+
+print(pais_andes)
+```
+
+### Ejercicio 3:
+
+```{r Ejer_3}
+### Ejercicio3:
+Datos_espemosqui = data.frame(num_espemosqui = paste0("Trb", 1:12), Genero = c("Anopheles", "Culex", "Psorophora", "Ochlerotatus", "Aedes", "Sabethes", "Culiseta", "Haemagogus", "Lutzia", "Mansonia", "Onirion", "Hodgesia"), Especie = c("albimanus", "pipiens", "lynchi", "albifasciatus", "aegypti", "albiprivus", "annulata", "janthinomys", "longipalpis", "pseudotitillans", "brucei", "theobals"), Individuos = sample(800.05:1200.75, 12, replace = TRUE), Num_indiv_region =sample(10:30, 12, replace = TRUE) )
+Datos_espemosqui
+```
+
+### Ejecicio 4:
+
+* Ejecicio 4.1:
+```{r Ejer_41}
+# Ejercicio 4.1:
+# Selección del dataset "DNase"
+?DNase
+print(head(DNase, 4))
+concentracion = subset(DNase, conc >= 0.1 & conc <= 0.2)
+print(concentracion)
+```
+* Ejercicio 4.2:
+  
+  
+```{r Ejerc42}
+# Ejercicio 4.2:
+# Selección del dataset "DNase"
+?DNase
+concentracion2 = subset(DNase, Run != 2 & conc > 0.2 & density <= 1.0)
+
+print(concentracion2)
+```
+
